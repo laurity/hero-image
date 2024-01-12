@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Salsa&display=swap');
+/*Cambia todos los elementos input, h1, span de la página porque es root*/
+:root{
+    --h1-font-size:6rem;
+    --span-font-size:3.5rem;
+    --input-size:20.75rem;
+    --h1-color: white;
+    --span-color: white;
+}
+
+@media screen and (max-width: 540px){
+    :root{
+        --h1-font-size:2.5rem;
+        --span-font-size:1.75rem;
+        --input-size:0.75rem;
+        --h1-color: white;
+        --span-color: white;
+    }
+}
+ 
+/*Pseudoelemento*/
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    font-family: 'Instrument Serif', sans-serif;
+}
+.hero-container{
+    background: url(../img/paisaje.jpg) no-repeat center/cover;
+    height: 100vh;
+    position: relative; /**/
+}
+.hero-container::before{
+   content: "";
+   background-color: black;
+   position:absolute;
+   width: 100%;
+   height: 100%;
+   opacity:0.7;
+}
+.hero-body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+body{
+    margin:0;
+}
+h1{
+    margin:0;
+    color: var(--h1-color);
+    font-size: var(--h1-font-size);
+}
+span{
+    color: var(--span-color);
+    font-size: var(--span-font-size);
+}
+.form{
+    display: flex;
+}
+
+input{
+    width: var(--input-size);
+    padding: 15px;
+    border-radius: 4px 4px;
+}
+button{
+    padding: 14px;
+    border-radius: 0 4px 4px 0 ;
+}
